@@ -1,0 +1,68 @@
+@startuml "model"
+
+class Professional {
+  active: boolean
+}
+
+class Appointment {
+  id: Long
+  date: Date
+  startTime: Time
+  endTime: Time
+  comments: String
+  status: PRESENT | ABSENT | CANCEL | OPEN
+
+}
+
+class Client {
+  birthDate: Date
+}
+
+class AppointmentType {
+  id: Integer
+  type: String
+}
+
+class Area {
+  id: Integer
+  name: String
+}
+
+class User {
+  email: String
+  password: String
+}
+
+class Role {
+  id: Integer
+  role: ADIMIN | OPERATOR
+}
+
+class WorkScheduleItem {
+  id: Long
+  dayOfWeek: DayOfWeek
+  startTime: Time
+  endTime: Time
+  slots: Integer
+  slotSize: Integer
+}
+
+class Person {
+  id: Long
+  name: String
+  phone: String
+}
+
+Person <|-- Client
+Person <|-- Professional
+Person <|-- User
+Professional "0..*" ---  "0..*" Area
+Professional        *--> "0..*" WorkScheduleItem
+Professional "0..1" -r-  "0..*" Appointment
+Appointment         o--> "0..1" AppointmentType
+Appointment  "0..*" -u-  "0..1" Client
+Appointment  "0..*" -r-  "0..1" Area
+User                o--> "0..*" Role
+
+
+@enduml
