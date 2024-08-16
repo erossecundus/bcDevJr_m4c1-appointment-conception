@@ -1,0 +1,62 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Função</th>
+      <th scope="col">Remover</th>
+    </tr>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"><input type="text" class="form-control" id="inputClientName" placeholder="Filtrar pelo nome"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>
+        <a href="/prototype/pages/user.html">Marcelo Camelo</a>
+      </td>
+      <td>marcelo.camelo@email.com</td>
+      <td>***</td>
+      <td>15 99988 7766</td>
+      <td>Administrador</td>
+      <td>
+        <div class="btn btn-sm">
+          <img src="/prototype/components/table_client/svg/trash3.svg" width="20" height="20" alt="delete">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>
+        <a href="/prototype/pages/user.html">Maria Joaquina</a>
+      </td>
+      <td>maria.joaquina@email.com</td>
+      <td>***</td>
+      <td>15 9876 6666</td>
+      <td>Atendente</td>
+      <td>
+        <div class="btn btn-sm">
+          <img src="/prototype/components/table_client/svg/trash3.svg" width="20" height="20" alt="delete">
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="paginator"></div>
+
+
+<script>
+  $(function () {
+    $("#paginator").load("../components/paginator/paginator.html");
+  })
+</script>
