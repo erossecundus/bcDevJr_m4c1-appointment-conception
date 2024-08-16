@@ -1,0 +1,54 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Data de Nascimento</th>
+      <th scope="col">Remover</th>
+    </tr>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"><input type="text" class="form-control" id="inputClientName" placeholder="Filtrar pelo nome"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>
+        <a href="/prototype/pages/client.html">Maria Lucia</a>
+      </td>
+      <td>15 99988 7766</td>
+      <td>15/05/2000</td>
+      <td>
+        <div class="btn btn-sm">
+          <img src="/prototype/components/table_client/svg/trash3.svg" width="20" height="20" alt="delete">
+        </div>        
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>
+        <a href="/prototype/pages/client.html">João Jones</a>
+      </td>
+      <td>15 99988 5545</td>
+      <td>07/11/1987</td>
+      <td>
+        <div class="btn btn-sm">
+          <img src="/prototype/components/table_client/svg/trash3.svg" width="20" height="20" alt="delete">
+        </div> 
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="paginator"></div>
+
+<script>
+  $(function () {
+    $("#paginator").load("../components/paginator/paginator.html");
+  })
+</script>
